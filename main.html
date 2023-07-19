@@ -9,7 +9,40 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			//Write your code hereif(arr.length<=1)
+			{
+				return "Infinite";
+			}
+			let flag=0;
+			if(let i=0;i<arr.length-1;i++)
+			{
+				if(arr[i]!=arr[i+1])
+				{
+					flag=1;
+					break;
+				}
+			}
+			if(flag==0)
+				return "Infinite";
+			let first=arr[0];
+			let sec=0;
+			for(let i=1;i<arr.length;i++)
+				{
+					if(arr[i]>first)
+					{
+						//if(first>sec)
+						//sec=first;
+						first=arr[i];
+					}
+				}
+			for(let i=0;i<arr.length;i++)
+				{
+					if(arr[i]<first && arr[i]>sec)
+					{
+						sec=arr[i];
+					}
+				}
+			return sec;
 			
 		}
 
