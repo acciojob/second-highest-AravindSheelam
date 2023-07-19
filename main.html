@@ -9,9 +9,10 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code hereif(arr.length<=1)
+			//Write your code here
+			if(arr.length<=1)
 			{
-				return "Infinite";
+				return "-Infinity";
 			}
 			let flag=0;
 			if(let i=0;i<arr.length-1;i++)
@@ -23,7 +24,7 @@
 				}
 			}
 			if(flag==0)
-				return "Infinite";
+				return "-Infinity";
 			let first=arr[0];
 			let sec=0;
 			for(let i=1;i<arr.length;i++)
